@@ -30,28 +30,210 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" Content="1" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="0" Grid.Column="1" Content="2" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="0" Grid.Column="2" Content="3" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="0" Grid.Column="3" Content="4" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="1" Grid.Column="0" Content="5" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="1" Grid.Column="1" Content="6" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="1" Grid.Column="2" Content="7" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="1" Grid.Column="3" Content="8" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="2" Grid.Column="0" Content="9" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="2" Grid.Column="1" Content="10" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="2" Grid.Column="2" Content="11" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="2" Grid.Column="3" Content="12" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="3" Grid.Column="0" Content="13" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="3" Grid.Column="1" Content="14" Style="{StaticResource ResourceKey=ButtonStyle}"></Button>
-        <Button Grid.Row="3" Grid.Column="2" Content="15" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Button15" Click="Button15_Click">
+        <Button Grid.Row="0" Grid.Column="0" Content="1" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle1" Click="PuzzleButton_Click">
             <Button.Triggers>
                 <EventTrigger RoutedEvent="Button.Click">
                     <EventTrigger.Actions>
-                        <BeginStoryboard Name="PuzzleAnimation">
-                            <Storyboard>
-                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:1"></Int32Animation>
-                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:1"></Int32Animation>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="1" Content="2" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle2" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="2" Content="3" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle3" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="3" Content="4" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle4" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="0" Content="5" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle5" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="6" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle6" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="2" Content="7" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle7" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="3" Content="8" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle8" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0" Content="9" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle9" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="1" Content="10" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle10" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" Content="11" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle11" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="3" Content="12" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle12" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="0" Content="13" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle13" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="1" Content="14" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle14" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="2" Content="15" Style="{StaticResource ResourceKey=ButtonStyle}" Name="Puzzle15" Click="PuzzleButton_Click">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Timeline.DesiredFrameRate="2">
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Row)" From="{Binding ActualRowIndex}" To="{Binding MoveRowIndex}" Duration="0:0:2.5"></Int32Animation>
+                                <Int32Animation Storyboard.TargetProperty="(Grid.Column)" From="{Binding ActualColumnIndex}" To="{Binding MoveColumnIndex}" Duration="0:0:2.5"></Int32Animation>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>

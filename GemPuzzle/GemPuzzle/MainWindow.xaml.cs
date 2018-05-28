@@ -29,13 +29,10 @@ namespace GemPuzzle
             this.DataContext = model;
         }
 
-        private void Button15_Click(object sender, RoutedEventArgs e)
+        private void PuzzleButton_Click(object sender, RoutedEventArgs e)
         {
-            //Blanket
-            model.ActualRowIndex = 3;
-            model.ActualColumnIndex = 2;
-            model.MoveRowIndex = 3;
-            model.MoveColumnIndex = 3;
+            model.ActualColumnIndex = 3; model.ActualRowIndex = 2;
+            model.FindIndexesMove();
         }
     }
 }
