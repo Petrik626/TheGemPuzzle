@@ -34,5 +34,11 @@ namespace GemPuzzle
             model.ActualColumnIndex = 3; model.ActualRowIndex = 2;
             model.FindIndexesMove();
         }
+
+        private void PuzzeGrid_MouseMove(object sender, MouseEventArgs e)
+        {
+            model.CoordinateWindowX = e.GetPosition(null).X;
+            model.CoordinateWindowY = e.GetPosition(null).Y;
+        }
     }
 }

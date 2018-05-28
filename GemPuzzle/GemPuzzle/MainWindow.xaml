@@ -15,7 +15,7 @@
             <Setter Property="Control.Foreground" Value="Black"></Setter>
         </Style>
     </Window.Resources>
-    <Grid Name="PuzzeGrid" ShowGridLines="False">
+    <Grid Name="PuzzeGrid" ShowGridLines="False" MouseMove="PuzzeGrid_MouseMove">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>

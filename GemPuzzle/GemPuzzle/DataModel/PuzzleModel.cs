@@ -38,6 +38,8 @@ namespace GemPuzzle.DataModel
             [new Puzzle(225, 337.5, 112.5, 0)] = new PairIndexPuzzle(3, 2),
             [new Puzzle(337.5, 450, 112.5, 0)] = new PairIndexPuzzle(3, 3)
         };
+        private double _coodrinateWindowX = 0.0;
+        private double _coordinateWindowY = 0.0;
         #endregion
         #region CONSTRUCTORS
         private PuzzleModel() { }
@@ -79,6 +81,8 @@ namespace GemPuzzle.DataModel
             get => (int)GetValue(MoveColumnIndexProperty);
             set => SetValue(MoveColumnIndexProperty, value);
         }
+        public double CoordinateWindowX { get => _coodrinateWindowX; set => _coodrinateWindowX = value; }
+        public double CoordinateWindowY { get => _coordinateWindowY; set => _coordinateWindowY = value; }
         #endregion
         #region METHODS
         public void FindIndexesMove()
