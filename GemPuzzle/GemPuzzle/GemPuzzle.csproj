@@ -83,6 +83,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataModel\PairIndexPuzzle.cs" />
+    <Compile Include="DataModel\Puzzle.cs" />
     <Compile Include="DataModel\PuzzleModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

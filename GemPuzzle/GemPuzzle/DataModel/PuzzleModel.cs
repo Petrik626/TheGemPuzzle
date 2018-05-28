@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace GemPuzzle.DataModel
 {
@@ -105,101 +101,5 @@ namespace GemPuzzle.DataModel
             gameField[moveIndexRow, moveIndexColumn] = false;
         }
         #endregion
-    }
-
-    internal sealed class Puzzle:IEquatable<Puzzle>
-    {
-        #region FIELDS
-        private double _a;
-        private double _b;
-        private double _c;
-        private double _d;
-        #endregion
-        #region CONSTRUCTORS
-        public Puzzle(double a,double b, double c, double d)
-        {
-            _a = a;
-            _b = b;
-            _c = c;
-            _d = d;
-        }
-        #endregion
-        #region METHODS
-        public bool Equals(Puzzle other)
-        {
-            return (_a == other._a) && (_b == other._b) && (_c == other._c) && (_d == other._d);
-        }
-
-        public override bool Equals(object obj)
-        {
-            return (obj is Puzzle) ? Equals((Puzzle)obj) : false;
-        }
-
-        public override int GetHashCode()
-        {
-            return _a.GetHashCode() ^ _b.GetHashCode() ^ _c.GetHashCode() ^ _d.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            StringBuilder builder = new StringBuilder();
-            builder.Append($"A={_a}");
-            builder.Append($"B={_b}");
-            builder.Append($"C={_c}");
-            builder.Append($"D={_d}");
-
-            return builder.ToString();
-        }
-        #endregion
-        #region PROPERTIES
-        public double A { get => _a; set => _a = value; }
-        public double B { get => _b; set => _b = value; }
-        public double C { get => _c; set => _c = value; }
-        public double D { get => _d; set => _d = value; }
-        #endregion
-    }
-
-    internal struct PairIndexPuzzle:IEquatable<PairIndexPuzzle>
-    {
-        #region FIELDS
-        private readonly int _index1;
-        private readonly int _index2;
-        #endregion
-        #region CONSTRUCORS
-        public PairIndexPuzzle(int i, int j)
-        {
-            _index1 = i;
-            _index2 = j;
-        }
-        #endregion
-        #region METHODS
-        public bool Equals(PairIndexPuzzle other)
-        {
-            return (_index1 == other._index1) && (_index2 == other._index2);
-        }
-
-        public override bool Equals(object obj)
-        {
-            return (obj is PairIndexPuzzle) ? Equals((PairIndexPuzzle)obj) : false;
-        }
-
-        public override int GetHashCode()
-        {
-            return _index1.GetHashCode() ^ _index2.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            StringBuilder builder = new StringBuilder();
-            builder.Append($"I={_index1}");
-            builder.Append($"J={_index2}");
-
-            return builder.ToString();
-        }
-        #endregion
-        #region PROPERTIES
-        public int I { get => _index1; }
-        public int J { get => _index2; }
-        #endregion
-    }
+    }    
 }
